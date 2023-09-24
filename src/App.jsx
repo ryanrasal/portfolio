@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Header from "./pages/Header";
 import ProjetsGroupes from "./pages/ProjetsGroupes";
 import ProjetSolo from "./pages/ProjetSolo";
+import WhoIAm from "./pages/WhoIAm";
 
 export default function App() {
   const [themeDark, setThemeDark] = useState(true);
@@ -24,6 +25,7 @@ export default function App() {
             : "bg-white transition-all duration-300  text-black"
         }
       >
+        <WhoIAm />
         <ProjetsGroupes />
         <ProjetSolo />
       </div>
