@@ -3,9 +3,9 @@ import ProjetsGroupesDetails from "../components/projetsGroupes/ProjetsGroupesDe
 
 export default function ProjetsGroupes() {
   return (
-    <div>
+    <>
       <HeaderProjetGroupes />
       <ProjetsGroupesDetails />
-    </div>
+    </>
   );
 }
