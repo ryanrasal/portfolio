@@ -1,11 +1,9 @@
 import ContactForm from "../components/Form/ContactForm";
 
-function Form() {
+export default function Form() {
   return (
     <>
       <ContactForm />
     </>
   );
 }
-
-export default Form;

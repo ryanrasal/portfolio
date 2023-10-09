@@ -31,15 +31,20 @@ const reseauxSociaux = [
 
 export default function ContactForm() {
   return (
-    <div className="flex flex-col md:justify-around">
-      {reseauxSociaux.map((item) => (
-        <div key={item.id}>
-          <img className="h-12 mx-auto mb-2" src={item.logo} alt={item.alt} />
-          <img className="h-40 mx-auto" src={item.qrCode} alt={item.alt} />
-          <p>{item.adresse}</p>
-        </div>
-      ))}
+    <div>
+      <div className="border-t w-1/2 mx-auto my-4"  />
+      <div className="flex flex-col md:flex-row md:justify-around">
+        {reseauxSociaux.map((item) => (
+          <div key={item.id}>
+            <img className="h-12 mx-auto mb-2" src={item.logo} alt={item.alt} />
+            {item.qrCode && (
+              <img className="h-40 mx-auto" src={item.qrCode} alt={item.alt} />
+            )}
+
+            <p>{item.adresse}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
-
