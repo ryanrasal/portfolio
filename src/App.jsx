@@ -4,7 +4,7 @@ import Header from "./pages/Header";
 import ProjetsGroupes from "./pages/ProjetsGroupes";
 import ProjetSolo from "./pages/ProjetSolo";
 import WhoIAm from "./pages/WhoIAm";
-import Form from "./pages/Form";
+import Contact from "./pages/Contact";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default function App() {
@@ -31,7 +31,7 @@ export default function App() {
           <WhoIAm />
           <ProjetsGroupes />
           <ProjetSolo />
-          <Form />
+          <Contact />
         </div>
       </div>
     </Router>
