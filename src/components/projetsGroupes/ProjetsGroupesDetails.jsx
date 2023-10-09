@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import sentiersPerdues from "../../assets/projets/sentiersPerdus.png";
 import WildOnTrack from "../../assets/projets/wildOnTrack.png";
 import nutriDiet from "../../assets/projets/nutriDiet.png";
@@ -12,6 +13,7 @@ export default function ProjetsGroupesDetails() {
       stack: "Html, Css et Javascript",
       time: "2 semaines",
       image: sentiersPerdues,
+      link: "https://github.com/ryanrasal/sentiers-perdus",
     },
     {
       id: 2,
@@ -40,11 +42,13 @@ export default function ProjetsGroupesDetails() {
       stack: "React, Tailwind et ExpressJs/NodeJs",
       time: "2 semaines",
       image: innovin,
+      link: "https://github.com/ryanrasal/Innovin_front",
     },
   ];
+
   return (
     <div>
-      <div className="grid grid-cols-3">
+      <div className="md:grid md:grid-cols-3">
         {projets.map((projet) => (
           <div className="rounded mx-2 p-3" key={projet.id}>
             <p className="text-xl font-bold tracking-wider text-primary">
@@ -52,6 +56,15 @@ export default function ProjetsGroupesDetails() {
             </p>
             <img className="h-40 rounded my-2 " src={projet.image} alt="" />
             <p className="font-bold ">{projet.stack}</p>
+            {projet.link && (
+              <NavLink
+                to={projet.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voir sur GitHub
+              </NavLink>
+            )}
           </div>
         ))}
       </div>

@@ -2,17 +2,59 @@ import one from "../../assets/projetsSolo/one.jpg";
 import two from "../../assets/projetsSolo/two.jpg";
 import three from "../../assets/projetsSolo/three.png";
 import four from "../../assets/projetsSolo/four.png";
+import { NavLink } from "react-router-dom";
 
 export default function ProjetSoloDetails() {
   return (
-    <>
-      <div className="grid grid-cols-4 ml-20">
-        <img className="h-80 rounded my-2 shadow-md " src={one} alt="" />
-        <img className="h-80 rounded my-2 shadow-md " src={two} alt="" />
-        <img className="h-80 rounded my-2 shadow-md " src={three} alt="" />
-        <img className="h-80 rounded my-2 shadow-md " src={four} alt="" />
+    <div className="flex flex-col">
+      <div className="md:grid md:grid-cols-4 md:ml-20 ">
+        <img
+          className="md:h-80 w-2/3 mx-auto  rounded my-2 shadow-md "
+          src={one}
+          alt=""
+        />
+        <img
+          className="md:h-80 w-2/3 mx-auto rounded my-2 shadow-md "
+          src={two}
+          alt=""
+        />
+        <img
+          className="md:h-80 w-2/3 mx-auto rounded my-2 shadow-md "
+          src={three}
+          alt=""
+        />
+        <img
+          className="md:h-80 w-2/3 mx-auto rounded my-2 shadow-md "
+          src={four}
+          alt=""
+        />
       </div>
       <div className="mx-20">
+        <h3 className="text-primary font-bold text-xl my-3">Liens Github :</h3>
+        <ul>
+          <li>
+            Front-end :{" "}
+            <NavLink
+              className="underline"
+              to="https://github.com/ryanrasal/instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lien ici
+            </NavLink>
+          </li>
+          <li>
+            Back-end :{" "}
+            <NavLink
+              className="underline"
+              to="https://github.com/ryanrasal/instagram_back_end"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lien ici
+            </NavLink>
+          </li>
+        </ul>
         <h3 className="text-primary font-bold text-xl my-3">
           Technologies Utilisées :
         </h3>
@@ -43,6 +85,6 @@ export default function ProjetSoloDetails() {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }

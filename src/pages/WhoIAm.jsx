@@ -2,17 +2,17 @@ import ryan from "../assets/ryan.jpg";
 
 export default function WhoIAm() {
   return (
-    <div className="flex py-10 items-center">
+    <div className="md:flex md:py-10 items-center">
       <img
         src={ryan}
         alt="photo de moi Ryan"
-        className="h-80  ml-40 rounded "
+        className="md:h-80 md:ml-40 rounded "
       />
       <div>
         <h2 className=" text-primary uppercase text-center text-2xl mb-4 font-bold tracking-wider">
           A propos de moi
         </h2>
-        <p className="mx-28">
+        <p className="md:mx-28 mx-10" >
           Bonjour ! Je m'appelle Ryan Beaujot, je suis développeur Web junior.
           <br /> <br />
           Avant, j'ai travaillé pendant 6 ans dans une usine de meuble en tant

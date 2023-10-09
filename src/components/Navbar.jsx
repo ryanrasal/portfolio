@@ -22,16 +22,18 @@ export default function Navbar({ handleChangeDarkMode, themeDark }) {
 
   return (
     <nav
-      className={` w-full justify-end flex transition-all duration-300 ${
+      className={` w-full md:justify-end justify-center flex flex-wrap transition-all duration-300 ${
         scrolling
           ? " text-black bg-white h-12 shadow-md fixed top-0 items-center"
-          : "fixed shadow-md top-10"
+          : "fixed top-10"
       }`}
     >
       <ul className="flex font-bold text-xl justify-around mr-10">
-        <li className="mx-6 hover:border-b cursor-pointer">Qui suis-je ?</li>
-        <li className="mx-6 hover:border-b cursor-pointer">Projets</li>
-        <li className="mx-6 hover:border-b cursor-pointer">Contact</li>
+        <li className="md:mx-6 mx-3 hover:border-b cursor-pointer">
+          Qui suis-je ?
+        </li>
+        <li className="md:mx-6 mx-3 hover:border-b cursor-pointer">Projets</li>
+        <li className="md:mx-6 mx-3 hover:border-b cursor-pointer">Contact</li>
         <button className="" onClick={() => handleChangeDarkMode()}>
           {themeDark ? <Sun /> : <Moon />}
         </button>
