@@ -13,6 +13,7 @@ export default function ProjetsGroupesDetails() {
       stack: "Html, Css et Javascript",
       time: "2 semaines",
       image: sentiersPerdues,
+      descriptionLink: "Voir sur Github Sentiers Perdues",
       link: "https://github.com/ryanrasal/sentiers-perdus",
     },
     {
@@ -42,7 +43,10 @@ export default function ProjetsGroupesDetails() {
       stack: "React, Tailwind et ExpressJs/NodeJs",
       time: "2 semaines",
       image: innovin,
+      descriptionLink: "Voir sur Github innovin_Front",
+      descriptionLinkTwo: "Voir sur Github innovin_Back",
       link: "https://github.com/ryanrasal/Innovin_front",
+      linkTwo: "https://github.com/ryanrasal/Innovin_back",
     },
   ];
 
@@ -61,8 +65,20 @@ export default function ProjetsGroupesDetails() {
                 to={projet.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="underline"
               >
-                Voir sur GitHub
+                {projet.descriptionLink}
+              </NavLink>
+            )}
+            <br />
+            {projet.linkTwo && (
+              <NavLink
+                to={projet.linkTwo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                {projet.descriptionLinkTwo}
               </NavLink>
             )}
           </div>
