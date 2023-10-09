@@ -7,7 +7,7 @@ export default function HeaderProjetSolo() {
         </h2>
         <p className="text-center text-lg pb-4 font-bold tracking-wider">
           Pour le projet final de ma formation de concepteur developpeur d'application,
-          j'ai décidé de refaire un clône de Instagram
+          j'ai décidé de refaire un clône de Instagram.
         </p>
       </>
     );
