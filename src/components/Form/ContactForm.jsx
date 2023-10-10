@@ -1,93 +1,45 @@
-import { useState } from "react";
+import linkedin from "../../assets/projets/logoLinkedin.png";
+import linkedinQr from "../../assets/projets/linkedinQr.png";
+import outlook from "../../assets/projets/outlook.png";
+import github from "../../assets/projets/github.png";
+import githubQr from "../../assets/projets/githubQr.jpg";
 
-function ContactForm() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const [isMessageValid, setIsMessageValid] = useState(true);
+const reseauxSociaux = [
+  {
+    id: 1,
+    nameLink: "Linkedin",
+    logo: linkedin,
+    link: "https://www.linkedin.com/in/ryan-beaujot-537062251/",
+    qrCode: linkedinQr,
+    alt: "Qr Code de Linkedin",
+  },
+  {
+    id: 2,
+    nameLink: "Github",
+    logo: github,
+    link: "https://github.com/ryanrasal",
+    qrCode: githubQr,
+    alt: "Qr Code de Github",
+  },
+];
 
-  const validateEmail = () => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const isValid = emailRegex.test(email);
-    setIsEmailValid(isValid);
-  };
-
-  const validateMessage = () => {
-    setIsMessageValid(message.trim() !== "");
-  };
-
-  const handleEmailSubmit = () => {
-    const subject = "Message via Portfolio ";
-    const mailtoLink = `mailto:ryan.beaujot@outlook.fr?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(message)}`;
-
-    window.location.href = mailtoLink;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    validateEmail();
-    validateMessage();
-
-    if (isEmailValid && isMessageValid) {
-      handleEmailSubmit();
-    }
-  };
-
+export default function ContactForm() {
   return (
-    <div className="flex flex-col pb-10">
-      <div className="border-t w-1/2 mx-auto" />
-      <h2 className="text-primary uppercase text-center text-2xl py-4 font-bold tracking-wider">
-        Contactez-nous
-      </h2>
-      <form className="mx-auto md:w-[50vh]" onSubmit={handleSubmit}>
-        <div className="flex flex-col py-2">
-          <label htmlFor="email">Adresse e-mail :</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            onBlur={validateEmail}
-            className={
-              !isEmailValid
-                ? "border-red-600 rounded-lg py-2 text-black border-2"
-                : "text-black py-2 border-2 rounded-lg"
-            }
-          />
-          {!isEmailValid && (
-            <p className="error">Veuillez entrer une adresse e-mail valide.</p>
-          )}
-        </div>
-        <div className="flex flex-col py-2">
-          <label htmlFor="message">Message :</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            onBlur={validateMessage}
-            className={
-              !isMessageValid
-                ? "invalid text-black border-2 "
-                : "text-black border-2"
-            }
-          />
-          {!isMessageValid && (
-            <p className="error">Veuillez entrer un message.</p>
-          )}
-        </div>
-        <div className="flex mt-2">
-          <button
-            className="border-2 rounded-lg hover:bg-black hover:text-white w-full mx-auto p-2"
-            type="submit"
-          >
-            Envoyer
-          </button>
-        </div>
-      </form>
+    <div>
+      <div className="border-t w-1/2 mx-auto my-4" />
+      <p className=" text-primary  uppercase text-center text-2xl py-4 font-bold tracking-wider">
+        Réseaux sociaux
+      </p>
+      <div className="flex flex-col md:flex-row md:justify-around">
+        {reseauxSociaux.map((item) => (
+          <div key={item.id}>
+            <img className="h-12 mx-auto mb-2" src={item.logo} alt={item.alt} />
+            {item.qrCode && (
+              <img className="h-40 mx-auto" src={item.qrCode} alt={item.alt} />
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
-
-export default ContactForm;
