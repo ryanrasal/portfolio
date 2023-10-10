@@ -22,7 +22,7 @@ export default function Navbar({ handleChangeDarkMode, themeDark }) {
 
   return (
     <nav
-      className={` w-full md:justify-end justify-center flex flex-wrap transition-all duration-300 ${
+      className={` w-full md:justify-end justify-center z-1000 flex flex-wrap transition-all duration-300 ${
         scrolling
           ? " text-black bg-white h-12 shadow-md fixed top-0 items-center"
           : "fixed top-10"
