@@ -9,22 +9,22 @@ export default function ProjetSoloDetails() {
     <div className="flex flex-col">
       <div className="md:grid md:grid-cols-4 md:ml-20 ">
         <img
-          className="md:h-80 w-2/3 mx-auto  rounded my-2 shadow-md "
+          className="md:h-80 md:w-40 w-2/3 mb-5 mx-auto  rounded my-2 shadow-md "
           src={one}
           alt=""
         />
         <img
-          className="md:h-80 w-2/3 mx-auto rounded my-2 shadow-md "
+          className="md:h-80 md:w-40 w-2/3 mb-5 mx-auto rounded my-2 shadow-md "
           src={two}
           alt=""
         />
         <img
-          className="md:h-80 w-2/3 mx-auto rounded my-2 shadow-md "
+          className="md:h-80 md:w-40 w-2/3 mb-5 mx-auto rounded my-2 shadow-md "
           src={three}
           alt=""
         />
         <img
-          className="md:h-80 w-2/3 mx-auto rounded my-2 shadow-md "
+          className="md:h-80 md:w-40 w-2/3 mb-5 mx-auto rounded my-2 shadow-md "
           src={four}
           alt=""
         />
