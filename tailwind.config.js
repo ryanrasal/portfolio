@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        header: "url('./src/assets/header.jpg')",
+        headerHome: "url('./src/assets/pexelsheader.jpg')",
       },
       colors: {
         primary: "#CCC8AA",
