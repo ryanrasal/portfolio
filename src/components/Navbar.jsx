@@ -28,12 +28,12 @@ export default function Navbar({ handleChangeDarkMode, themeDark }) {
           : "fixed top-10"
       }`}
     >
-      <ul className="flex font-bold text-xl justify-around mr-10">
-        <li className="md:mx-6 mx-3 hover:border-b cursor-pointer">
+      <ul className="flex font-bold md:text-xl  justify-around mr-10">
+        <li className="md:mx-6 mx-1 hover:border-b cursor-pointer">
           Qui suis-je ?
         </li>
-        <li className="md:mx-6 mx-3 hover:border-b cursor-pointer">Projets</li>
-        <li className="md:mx-6 mx-3 hover:border-b cursor-pointer">Contact</li>
+        <li className="md:mx-6 mx-1 hover:border-b cursor-pointer">Projets</li>
+        <li className="md:mx-6 mx-1 hover:border-b cursor-pointer">Contact</li>
         <button className="" onClick={() => handleChangeDarkMode()}>
           {themeDark ? <Sun /> : <Moon />}
         </button>
